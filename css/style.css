@@ -96,6 +96,11 @@ footer{
     font-size: 1.2rem;
     position: relative;
     z-index: 1;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 footer ul li{
@@ -175,7 +180,7 @@ footer ul li:hover{
     }
 }
 
-@media (max-width: 350px){
+@media (max-width: 400px){
     .center h2{
         font-size: 3.2rem;
     }
@@ -184,5 +189,17 @@ footer ul li:hover{
     }
     footer{
         font-size: .8rem;
+    }
+}
+
+@media (max-width: 346px){
+    .center h2{
+        font-size: 3.2rem;
+    }
+    .center .button{
+        font-size: .8rem;
+    }
+    footer{
+        font-size: .7rem;
     }
 }
