@@ -165,3 +165,24 @@ footer ul li:hover{
         z-index: 0;
     }
 }
+
+@media (max-width: 425px){
+    .center h2{
+        font-size: 4rem;
+    }
+    footer{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 350px){
+    .center h2{
+        font-size: 3.5rem;
+    }
+    .center .button{
+        font-size: .8rem;
+    }
+    footer{
+        font-size: .8rem;
+    }
+}
