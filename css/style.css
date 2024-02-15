@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    position: relative;
+    z-index: 3;
+}
+
+nav h1{
+    color: white;
+    padding-left: 1rem;
+}
+
+nav h1:hover{
+    color: #ff0037;
+    cursor: pointer;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aqua;
+}
+
+nav ul li a:hover{
+    color: #ff0037;
+    text-decoration: overline;
+}
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 12rem;
+    margin-bottom: 10rem;
+    
+    position: relative;
+    z-index: 1;
+}
+
+.center h2{
+    color: #ff0037;
+    font-size: 5rem;
+}
+
+.center .button{
+    text-decoration: none;
+    color: aqua;
+    background-color: #ff0037;
+    padding: 1rem 2rem;
+    margin: .8rem;
+    font-weight: bolder;
+}
+
+.center .button:hover{
+    background-color: white;
+    color: #ff0037;
+}
+
+footer{
+    background-color: rgb(2, 188, 221);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer ul h3{
+    color: #ff0037;
+}
+
+footer ul li:hover{
+    color: #ff0037;
+    cursor: pointer;
+}
+
+.margin{
+    margin: .3rem 0rem;
+}
+
+.checkbtn{
+    filter:invert();
+    cursor: pointer;
+    line-height: 4rem;
+    margin-right: 2.5rem;
+    display: none;
+    font-size: 1.6rem;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    nav{
+        position: sticky;
+        top:0;
+        width: 100%;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        backdrop-filter: blur(50px);
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 3rem 0rem;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 1.3rem;
+    }
+    .center{
+        margin-bottom: 8rem;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    #check:checked ~ .center{
+        z-index: 0;
+    }
+}
